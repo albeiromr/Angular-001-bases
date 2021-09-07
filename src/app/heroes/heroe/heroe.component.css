@@ -1,0 +1,15 @@
+.heroe-component {
+    background: rgb(230, 230, 230);
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.heroe-component__button {
+    width: auto;
+    height: 45px;
+    background: darkolivegreen;
+    color: white;
+    font-weight: 500;
+    margin: 0 40px;
+    white-space: nowrap;
+}

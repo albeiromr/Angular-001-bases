@@ -1,0 +1,8 @@
+.example-button {
+    width: 60px;
+    height: 45px;
+    background: darkolivegreen;
+    color: white;
+    font-weight: 500;
+    margin: 0 40px;
+}
