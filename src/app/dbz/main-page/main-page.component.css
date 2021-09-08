@@ -1,0 +1,9 @@
+.row {
+    border-bottom: 30px rgb(87, 105, 105) solid;
+    display: flex;
+    
+}
+
+.col {
+   flex-grow: 1;
+}
