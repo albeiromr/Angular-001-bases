@@ -15,11 +15,15 @@
         <dd>{{nombreEnMayusculas}}</dd>
     </dl>
 
-    <button class="heroe-component__button">
+    <button 
+    (click)="cambiarNombre()"
+    class="heroe-component__button">
         Cambiar Heroe
     </button>
 
-    <button class="heroe-component__button">
+    <button
+    (click)="cambiarEdad()"
+    class="heroe-component__button">
         Cambiar Edad
     </button>
 </div>

@@ -1,0 +1,19 @@
+.listado {
+    width: 50%;
+    height: auto;
+    min-height: 200px;
+    background: rgb(231, 231, 231);
+    padding: 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+.borrar-button {
+    width: auto;
+    height: 45px;
+    background: darkolivegreen;
+    color: white;
+    font-weight: 500;
+    margin: 0 40px;
+    white-space: nowrap;
+}
