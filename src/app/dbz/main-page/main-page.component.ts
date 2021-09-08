@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
-import {IPersonaje} from '../dbz.interface'
+import {IPersonaje} from '../interfaces/dbz.interface'
+import { DbzService } from '../services/dbz.service';
 
 
 
@@ -10,19 +11,14 @@ import {IPersonaje} from '../dbz.interface'
 })
 export class MainPageComponent {
 
-  public personajes: IPersonaje[] = [
-    {
-      nombre: "Goku",
-      poder: 20500
-    },
-    {
-      nombre: "Frezzer",
-      poder: 30400
-    },
-  ];
-
-  //esta funsión está recibiendo datos desde el componente hijo agregar.component
-  agregarPersonaje(personaje: IPersonaje){
-    this.personajes = [...this.personajes, personaje];
+  get personajes():IPersonaje[] {
+    return this.dbzService.personajes
   }
+
+  
+  /* agregarPersonaje(personaje: IPersonaje){
+    this.personajes = [...this.personajes, personaje];
+  } */
+
+  constructor( private dbzService: DbzService ){}
 }
