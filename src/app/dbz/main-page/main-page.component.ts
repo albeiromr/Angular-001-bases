@@ -1,9 +1,7 @@
 import { Component} from '@angular/core';
+import {IPersonaje} from '../dbz.interface'
 
-interface IPersonaje {
-  nombre: string;
-  poder: number;
-}
+
 
 @Component({
   selector: 'app-main-page',
@@ -11,11 +9,6 @@ interface IPersonaje {
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
-
-  public nuevo: IPersonaje = {
-    nombre: "",
-    poder: 0
-  }
 
   public personajes: IPersonaje[] = [
     {
@@ -26,20 +19,10 @@ export class MainPageComponent {
       nombre: "Frezzer",
       poder: 30400
     },
-
   ];
 
-  /* forma no recomendada de leer los inputs
-  cambiarNombre(event: any){
-    this.nuevo.nombre = event.target.value;
-  } */
-
-  agregarPersonaje(){
-    if(this.nuevo.nombre.trim().length === 0 || this.nuevo.poder <= 0) return;
-    this.personajes = [...this.personajes, this.nuevo];
-    this.nuevo = {
-      nombre: "",
-      poder: 0
-    }
+  //esta funsión está recibiendo datos desde el componente hijo agregar.component
+  agregarPersonaje(personaje: IPersonaje){
+    this.personajes = [...this.personajes, personaje];
   }
 }
